@@ -14,11 +14,10 @@ public class Main {
         ECesta cesta;
         cesta = new ECesta("Apellidos del alumno", 100, "dni del alumno", 5);
         nuevoMetodo(cesta);
-             
-        
+
     }
-    
-    public static void nuevoMetodo(ECesta cesta){
+
+    public static void nuevoMetodo(ECesta cesta) {
         try {
             cesta.comprar(50);
         } catch (Exception e) {
@@ -32,7 +31,14 @@ public class Main {
         }
         double bactual = cesta.bonificacion();
         System.out.println("Su bono actual es " + bactual);
-        
+
+        try {
+            System.out.println(" Modificación 1");
+            cesta.ActualizarBono(bactual);
+        } catch (Exception e) {
+            System.out.print("Fallo…….");
+        }
+
     }
 
 }
